@@ -597,23 +597,27 @@ h2 {
  }
 
 /* --- TEAM --- */
+
 .team {
   padding: 3em 0;
 }
 
-/* .header-team {
-  text-align: center;
-} */
-
 .team-images {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+@media (min-width: 55rem){
+  .team-images {
+    flex-direction: row;
+  }
+}
+
 .image-team {
-  width: 240px;
-  height: 240px;
+  width: 170px;
+  height: 170px;
   transform: rotate(45deg);
   overflow: hidden;
   border: 20px solid #fff;
@@ -622,15 +626,50 @@ h2 {
   opacity: .5;
 }
 
+.image-team.active {
+  width: 255px;
+  height: 255px;
+  z-index: 1000;
+  opacity: 1;
+}
+
 .bg-img-team {
   background-color: #e7e7e6;
   background-size: cover;
-  width: 306px;
-  height: 306px;
+  width: 230px;
+  height: 230px;
   transform: rotate(-45deg);
   position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
+.image-team.active .bg-img-team {
+  width: 340px;
+  height: 340px;
   top: -60px;
   left: -60px;
+}
+
+@media (min-width: 70rem){
+  .image-team {
+    width: 230px;
+    height: 230px;
+  }
+  .image-team.active {
+    width: 340px;
+    height: 340px;
+  }
+  .bg-img-team {
+    width: 305px;
+    height: 305px;
+    top: -60px;
+    left: -60px;
+  }
+  .image-team.active .bg-img-team {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .bg-img-team.img-team_1 {
@@ -645,19 +684,9 @@ h2 {
   background-image: url(../images/team_3.png);
 }
 
-.image-team.active .bg-img-team {
-  width: 450px;
-  height: 450px;
-  top: -60px;
-  left: -60px;
-}
 
-.image-team.active {
-  width: 340px;
-  height: 340px;
-  z-index: 1000;
-  opacity: 1;
-}
+
+
 
 /* --- CLIENTS --- */
 .clients {
