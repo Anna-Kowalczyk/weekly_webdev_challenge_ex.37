@@ -24,7 +24,7 @@ img {
   height: auto;
 }
 
-figure {
+.img-container {
   margin: 0;
   position: relative;
 }
@@ -455,7 +455,7 @@ h2 {
   position: relative;
 }
 
-.container-process {
+.container-process-text {
   width: 80%;
 }
 
@@ -477,7 +477,7 @@ h2 {
   box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.22);
 }
 
-.container.margin-right {
+.container-process {
   width: 100%;
   margin-right: 0;
   display: flex;
@@ -544,11 +544,11 @@ h2 {
 }
 
  @media (min-width: 75rem) {
-   .container-process {
+   .container-process-text {
      margin-right: 10%;
    }
 
-   .container.margin-right {
+   .container-process {
      width: 100%;
      margin-right: 0;
      display: flex;
@@ -564,12 +564,12 @@ h2 {
      margin-right: -70px;
    }
 
-   .container-process {
+   .container-process-text {
      width: 25%;
      display: inline-block;
      margin-right: 0;
    }
-   .container.margin-right {
+   .container-process {
      width: 90%;
      flex-direction: row;
      align-items: flex-start;
@@ -615,7 +615,7 @@ h2 {
   }
 }
 
-.image-team {
+.img-container {
   width: 170px;
   height: 170px;
   transform: rotate(45deg);
@@ -624,16 +624,17 @@ h2 {
   position: relative;
   margin: 30px 15px;
   opacity: .5;
+  position: relative;
 }
 
-.image-team.active {
+.img-container.active {
   width: 255px;
   height: 255px;
   z-index: 1000;
   opacity: 1;
 }
 
-.bg-img-team {
+.bg-img {
   background-color: #e7e7e6;
   background-size: cover;
   width: 230px;
@@ -644,7 +645,7 @@ h2 {
   left: -40px;
 }
 
-.image-team.active .bg-img-team {
+.img-container.active .bg-img {
   width: 340px;
   height: 340px;
   top: -60px;
@@ -652,47 +653,61 @@ h2 {
 }
 
 @media (min-width: 70rem){
-  .image-team {
+  .img-container {
     width: 230px;
     height: 230px;
   }
-  .image-team.active {
+  .img-container.active {
     width: 340px;
     height: 340px;
   }
-  .bg-img-team {
+  .bg-img {
     width: 305px;
     height: 305px;
     top: -60px;
     left: -60px;
   }
-  .image-team.active .bg-img-team {
+  .img-container.active .bg-img {
     width: 450px;
     height: 450px;
   }
 }
 
-.bg-img-team.img-team_1 {
+.bg-img.img-team_1 {
   background-image: url(../images/team_1.png);
 }
 
-.bg-img-team.img-team_2 {
+.bg-img.img-team_2 {
   background-image: url(../images/team_2.png);
 }
 
-.bg-img-team.img-team_3 {
+.bg-img.img-team_3 {
   background-image: url(../images/team_3.png);
 }
 
-
-
-
-
 /* --- CLIENTS --- */
+
 .clients {
   padding: 3em 0;
 }
 
+.container-clients {
+
+}
+
+.bg-img.img-client {
+  width: 380px;
+  height: 380px;
+}
+
+.bg-img.img-client_1 {
+  background-image: url(../images/client.png);
+}
+
+.img-container-client {
+  width: 300px;
+  height: 300px;
+}
 
 /* --- FOOTER --- */
 
